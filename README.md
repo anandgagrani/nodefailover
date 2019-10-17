@@ -2,59 +2,6 @@
 C7000 Blades –How to migrate to Hot Stand by Blade /Compute if dedicated OS Host fails.
 
 
-
-
-
-
-
-
-
-
-
-
-
-	 
-
-Contents
-Objective	1
-Process flow	2
-Prerequisites	2
-Scripts and Paths	3
-Execution / input scripts:	3
-Action flow	4
-Results:	9
-Troubleshooting / Extras:	9
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 Objective
 To ensure that via HPE Monitor Scripts, If either of the Host ( in 4 Node Cluster of KVM), any of the Dedicated OS Host fails , Hot Stand-by Blade /Compute will take over as part of failover process.
 
