@@ -1,0 +1,12 @@
+[Unit]
+Description=OneView HA cluster for server hardwares
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=PWD
+ExecStart=/usr/local/bin/python3.6 failover_node.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

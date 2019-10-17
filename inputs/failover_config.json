@@ -1,0 +1,16 @@
+{
+    "oneview_config": {
+        "host": "172.168.101.252",
+        "user": "Administrator",
+        "passwd": "GSE#admin1",
+        "authLoginDomain": "local",
+        "fail_severity": "critical",
+        "hardwares_to_monitor": [
+            "Rack3-C7000, bay 5",
+            "Rack3-C7000, bay 6",
+            "Rack3-C7000, bay 3"
+        ],
+        "standby_hardware": "Rack3-C7000, bay 7"
+    },
+    "logging_level": "INFO"
+}
