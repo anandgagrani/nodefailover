@@ -2,14 +2,14 @@
 C7000 Blades –How to migrate to Hot Stand by Blade /Compute if dedicated OS Host fails.
 
 
-Objective
+Objective:
 To ensure that via HPE Monitor Scripts, If either of the Host ( in 4 Node Cluster of KVM), any of the Dedicated OS Host fails , Hot Stand-by Blade /Compute will take over as part of failover process.
 
-Process flow
+Process flow:
  
 
 
-Prerequisites
+Prerequisites:
 1.	1 x C7000 enclosure with 4 BL460 g9/g10 blades.
 2.	1 x Oneview virtual appliance that is monitoring c7000 enclosure and servers.
 3.	The Oneview profiles are created on 4 blades with boot disk from SAN and 3 nodes (that are being monitored) are installed with RHEL OS and are configured to be part of cluster.
@@ -19,7 +19,8 @@ Prerequisites
 •	RUN $pip3 install > redfish, hponeview>=4.7.0
 •	Download the HPE provided zip file for the scripts and place in dir  ~/BSNL_cluster_failover_POC/.
 •	Directory structure should look like following:
- [root@appliance-vm BSNL_cluster_failover_POC]# ll
+
+[root@appliance-vm BSNL_cluster_failover_POC]# ll
 total 44
 -rw-r--r--. 1 root root 16107 Jul 19 00:26 failback_node.py
 -rw-r--r--. 1 root root 24330 Jul 25 03:04 failover_node.py
@@ -50,7 +51,7 @@ drwxr-xr-x. 2 root root    60 Jul 23 03:17 inputs
 
 
 
-Scripts and Paths
+Scripts and Paths:
 Ensure that all the HPE scripts (as part of attachment) , be unzipped and placed in CentOS VM. Following is an example of the paths we used in our lab setup.
 Execution / input scripts:
 1.	~/BSNL_cluster_failover_POC /failover_node.py                - This is master script that monitors alerts and migrates profile from failed to standby hardware
@@ -69,7 +70,7 @@ Execution / input scripts:
 and failback_node.py
 
 
-Action flow
+Action flow:
 1.	Set the desired hardware names to monitor in following file:
 $ vim ~/BSNL_cluster_failover_POC /inputs/failover_config.json
 {
